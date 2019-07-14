@@ -1,0 +1,100 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- calc.html                                          :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: acalkins <marvin@42.fr>                    +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2019/06/21 16:18:30 by acalkins          #+#    #+#            -->
+<!-- Updated: 2019/06/22 18:11:52 by acalkins         ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<html>
+    <head>     
+        <title>It’s over 9000!</title>    
+        <style type="text/css">
+        </style>  
+    </head>
+    <body>
+
+		<p>Number: <input type="number" id="myNumber" value="0"></input></p>
+	<form>
+  		Select your operator:
+  		<select id="mySelect">
+    		<option value="+">+</option>
+    		<option value="-">-</option>
+    		<option value="*">*</option>
+    		<option value="/">/</option>
+			<option value="%">%</option>
+  		</select>
+	</form>
+	<p>Number: <input type="number" id="myNumber1" value="0"></input></p>
+
+	<p>Click the button to math number fields.</p>
+	<input type="submit" value = "Try me !" onclick="myFunction()"></input>
+
+	<script>
+  		setInterval(function(){ alert("Please, use me..."); }, 30000);
+	</script>
+
+	<script>
+	function myFunction()
+	{
+		var x = document.getElementById("myNumber").value;
+		var y = document.getElementById("myNumber1").value;
+		if (!x || !y)
+    	{
+      		alert ("Error! :(");
+    	}
+    	else
+		{
+      		x = parseInt(x);
+      		y = parseInt(y);
+			if (x < 0 || y < 0)
+			{
+				alert ("Error! :(");
+			}
+			else if (x >= 0 || y >= 0)
+			{
+				var op = document.getElementById("mySelect").value;
+				var z = 0;
+				if (op == "/" && y == 0)
+				{
+					alert("It’s over 9000!");
+				}
+				else if (op == "%" && y == 0)
+				{
+					alert("It’s over 9000!");
+				}
+				else
+				{
+					if (op == "+")
+					{
+						z = x + y;
+					}
+  					else if (op == "-")
+					{
+						z = x - y;
+					}
+					else if (op == "*")
+					{
+						z = x * y;
+					}
+					else if (op == "/")
+					{
+						z = x / y;
+					}
+					else if (op == "%")
+					{
+						z = x % y;
+					}
+					console.log(z);
+					alert(z);
+				}
+			}
+		}
+	}
+	</script>
+    </body>
+</html>

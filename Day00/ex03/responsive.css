@@ -1,0 +1,74 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    responsive.css                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: acalkins <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/06/10 21:22:20 by acalkins          #+#    #+#              #
+#    Updated: 2019/06/11 14:46:11 by acalkins         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      width: 5%;
+      height: 60%;
+    }
+    h1 {
+      font-size: 2vw;
+      text-align: center;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1vw;
+      margin: 0;
+    }
+	.weight {
+		text-align: right;
+	}
+	.color_1 {
+		background-color: yellow;
+	}
+	.color_2 {
+		background-color: #42cef4;
+	}
+	.color_3 {
+		background-color: #e83a3a;
+	}
+	.color_4 {
+		background-color: #68522b;
+	}
+	.color_5 {
+		background-color: #f4ac2e;
+	}
+	.color_6 {
+		background-color: #ffca70;
+	}
+	.color_7 {
+		background-color: #bab7b2;
+	}
+	.color_8 {
+		background-color: #f2ece3;
+	}
+	.color_9 {
+		background-color: #e1b0e5;
+	}
+	.color_10 {
+		background-color: #f7adec;
+	}
+	img {
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 40em;
+	}
+
+    body {
+            background-color: #37e59c;
+   }

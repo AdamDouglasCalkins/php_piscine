@@ -1,0 +1,79 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    responsive.css                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: acalkins <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/06/10 21:22:20 by acalkins          #+#    #+#              #
+#    Updated: 2019/06/10 21:38:15 by acalkins         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+    ul {
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+  
+	img {
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 40em;
+	}
+    body {
+            background-color: #37e59c;
+   }
+
+   /*Menu*/
+ul.menu > li {
+	position: relative;
+	float: left;
+}
+
+ul.menu > li > a {
+	display: block;
+	background-color: red;
+	text-align: center;
+	padding: 10px 15px 10px 15px; 
+	font-size: 15px;
+	color: #ffffff; 
+}
+
+ul.menu >li > a:hover {
+	background-color: green;
+}
+
+/*Submenu*/
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 37px;
+    left: 0;
+    background-color: white;
+    border: 1px solid red;
+}
+
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}

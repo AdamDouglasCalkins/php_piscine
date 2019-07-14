@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+    <style>
+    </style>
+    <script>
+        var calc;
+        var num1;
+        var num2;
+        var op;
+
+        $(document).ready(function(){
+            calc = $('#calc');
+            num1 = $('#num1');
+            num2 = $('#num2');
+            op = $('#operator');
+            calc.submit(submit);
+            setInterval("alert('Please, use me...')", 30000);
+        });
+
+        function numIsValid(n1, n2) {
+            return n1 == parseInt(n1, 10) && n1 >= 0 && n2 == parseInt(n2, 10) && n2 >= 0;
+        }
+
+        function submit(event) {
+            event.preventDefault();
+            var n1 = Number(num1.val());
+            var n2 = Number(num2.val());
+            if (!numIsValid(num1.val(), num2.val())) {
+                alert("Error :(");
+                return false;
+            }
+            switch (op.val()) {
+                case ('+'):
+                    result(n1 + n2);
+                    break;
+				case ('-'):
+                    result(n1 - n2);
+                    break;
+                case ('*'):
+                    result(n1 * n2);
+                    break;
+                case ('/'):
+                    if (n2 === 0) {
+                        result("It’s over 9000!");
+                    } else {
+                        result(n1 / n2);
+                    }
+                    break;
+                case ('%'):
+                    if (n2 === 0) {
+                        result("It’s over 9000!");
+                    } else {
+                        result(n1 % n2);
+                    }
+                    break;
+                default:
+                    result("operation not found");
+                    break;
+            }
+        }
+
+        function result(res) {
+            console.log(res);
+            alert(res);
+        }
+    </script>
+</head>
+<body>
+    <div class="page">
+        <div class="calc">
+            <div class="circle"></div>
+            <form action="" id="calc">
+                <input type="text" id="num1"><br>
+                <select id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select><br>
+                <input type="text" id="num2"><br>
+                <input type="submit" id="submit" value="Try me!">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

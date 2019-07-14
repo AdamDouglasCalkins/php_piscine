@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do or not to do</title>
+    <script src="todo.js"></script>
+    <style>
+		body {
+			background-color: gray;
+		}
+		h1 {
+			text-align: center;
+		}
+		div {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.newelem {
+		    background-color: #76d7f7;
+    		color: white;
+    		width: 20%;
+    		font-size: 1em;
+    		padding: 1%;
+    		border: 2px solid #024cf9;
+    		margin-top: 2px;
+  		}
+    </style>
+</head>
+<body>
+    <div class="todos">
+        <h1>To Do List</h1>
+        <div id="ft_list"></div>
+		<div style="text-align:center;"><button id="submit" onclick="add_new(this)">New</button></div>
+    </div>
+</body>
+</html>
